@@ -53,8 +53,8 @@
 //
 // Limit Switches
 //
-#define X_STOP_PIN                          PA15
-#define Y_STOP_PIN                          PA12
+#define X_STOP_PIN                          PA12
+#define Y_STOP_PIN                          PA15
 #define Z_MIN_PIN                           PA11
 #define Z_MAX_PIN                           PC4
 
@@ -65,9 +65,9 @@
 #define X_STEP_PIN                          PE3
 #define X_DIR_PIN                           PE2
 
-#define Y_ENABLE_PIN                        PA3
-#define Y_STEP_PIN                          PA6
-#define Y_DIR_PIN                           PA1
+#define Y_ENABLE_PIN                        PE1
+#define Y_STEP_PIN                          PE0
+#define Y_DIR_PIN                           PB9
 
 #define Z_ENABLE_PIN                        PB8
 #define Z_STEP_PIN                          PB5
@@ -77,9 +77,9 @@
 #define E0_STEP_PIN                         PD6
 #define E0_DIR_PIN                          PD3
 
-//#define E1_ENABLE_PIN                       PA3
-//#define E1_STEP_PIN                         PA6
-//#define E1_DIR_PIN                          PA1
+#define E1_ENABLE_PIN                       PA3
+#define E1_STEP_PIN                         PA6
+#define E1_DIR_PIN                          PA1
 
 //
 // Temperature Sensors
@@ -96,7 +96,7 @@
 #endif
 #if HOTENDS == 1
   #ifndef FAN1_PIN
-    //#define FAN1_PIN                        PB0
+    #define FAN1_PIN                        PB0
   #endif
 #else
   #ifndef HEATER_1_PIN
@@ -136,8 +136,8 @@
   #define WIFI_IO1_PIN                      PC7   // MKS ESP WIFI IO1 PIN
   #define WIFI_RESET_PIN                    PA5   // MKS ESP WIFI RESET PIN
 #else
-  //#define POWER_LOSS_PIN                  PA2   // PW_DET
-  //#define PS_ON_PIN                       PB2   // PW_OFF
+  #define POWER_LOSS_PIN                  PA2   // PW_DET
+  #define PS_ON_PIN                       PB2   // PW_OFF
   #define FIL_RUNOUT_PIN                    PA4
   #define FIL_RUNOUT2_PIN                   PE6
 #endif
@@ -193,7 +193,7 @@
 
   #define TOUCH_BUTTONS_HW_SPI
   #define TOUCH_BUTTONS_HW_SPI_DEVICE          2
-
+  
   #define TFT_BUFFER_SIZE                  14400
 #endif
 
